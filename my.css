@@ -1,8 +1,10 @@
+
+
 #firstpage p{
 
 	
 	font-size: 1.7em;
-	font-family: DextorC;
+    font-family: 'Philosopher', sans-serif;
 	margin-left: 5%;
 	
 
@@ -57,7 +59,10 @@
 	margin-left: 10%;
 }
 
-
+#name{
+	width: 50%;
+	height: 50%
+}
 
 #myCanvas{
 	height: 24em;

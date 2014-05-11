@@ -9,14 +9,14 @@
         <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
         <link rel="stylesheet" href="my.css">
+        <link href='http://fonts.googleapis.com/css?family=Philosopher&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 	</head>
 
 <body>
-
+    <!-- главная -->
 	<div id="home" data-role="page" >
-
     	<div id="firstpage" data-role="header" data-backbtn="false">
     		<p> Веганский Нежданчик</p>
               <!-- navbar -->
@@ -133,20 +133,27 @@
         </div>
     </div>
 
-
+    <!-- контакты -->
     <div data-role="page" id="contacts">
 
-       <div  data-role="header" data-backbtn="false" >
-            <div data-role="navbar">
+      <div id="firstpage" data-role="header" data-backbtn="false">
+            <p> Веганский Нежданчик</p>
+              <!-- navbar -->
+               <div data-role="navbar">
                     <ul>
                         <li><a href="#home">One</a></li>
                         <li><a href="#galery">Two</a></li>
                         <li><a href="#post">Three</a></li>
                     </ul>
                 </div>
-        </div>
+         </div>
 
         <div id="content_dialog" data-role="content" >
+
+            <p > Веганский нежданчик – это небольшая коллекция вегетарианских рецептов, доступная на сайте или в удобном приложении для Android. Мы собираем для вас самые красивые и вкусные рецепты со всего интернета, чтобы вам было удобно находить их в одном месте. Добро пожаловать в наш блог. </p> 
+            <p >Мы — то, что мы едим. С уважением, автор блога </p>
+
+
             <canvas id="myCanvas" ></canvas>
             <script>
                 var canvas =document.getElementById("myCanvas");
@@ -212,7 +219,7 @@
 
         <div id="content_name" data-role="footer">
 
-            <p>Created by Kate Pavlintseva DCIM-4-1 2014</p>
+            <p> </p>
 
          </div>
     </div>
