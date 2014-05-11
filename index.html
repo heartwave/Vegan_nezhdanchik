@@ -16,19 +16,38 @@
 
 
 
-        <script> 
-        function captureSuccess(mediaFiles) {
-            navigator.notification.alert('Success taking picture:');
-        }        
-        function captureError(mediaFiles) {
-            navigator.notification.alert('Error taking picture: ' + error.code);
-        }
-        $(document).bind("deviceready",function () {
-            $("#takePhotoButton").bind("tap", function() {
-                navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 1});
-            });
-        });
-</script>
+       <script type="text/javascript" charset="utf-8">
+ 
+            var pictureSource,
+                destinationType
+             
+            document.addEventListener("deviceready",loaded,false);
+             
+            function loaded() {
+                pictureSource=navigator.camera.PictureSourceType;
+                destinationType=navigator.camera.DestinationType;
+            }
+             
+            function getPhoto(imageData) {
+                var smallImage = document.getElementById('smallImage');
+                 
+                 
+                smallImage.style.display = 'block';
+                 
+                 
+                smallImage.src = "data:image/jpeg;base64," + imageData;
+            }
+             
+            function capturePhoto() {
+                navigator.camera.getPicture(getPhoto, onFail, { quality: 50 });
+            }
+            
+             
+            function onFail(message) {
+                alert('Failed because: ' + message);
+            }
+             
+            </script>
 	</head>
 
 <body>
@@ -322,7 +341,9 @@
         <div id="img1">
             </div>
             
-          <a id="takePhotoButton" class="ui-btn">Take Photo</a>  
+          <a onclick="capturePhoto();" class="ui-btn">Take Photo</a>  
+          <br>
+        <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
         </div>
 
         <div  data-role="footer" >
