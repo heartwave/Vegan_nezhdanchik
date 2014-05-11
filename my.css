@@ -50,10 +50,10 @@
 
 #header_dialog p{
 	font-size: 1em;
-	margin: 10%;
+	margin-left: 15%;
 }
 
-#content_dialog h2{
+#content_dialog p{
 	margin-left: 15%;
 }
 
