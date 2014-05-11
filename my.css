@@ -5,7 +5,7 @@
 	
 	font-size: 1.7em;
     font-family: 'Philosopher', sans-serif;
-	margin-left: 5%;
+	margin-left: 8%;
 	
 
 }
@@ -59,12 +59,9 @@
 	margin-left: 10%;
 }
 
-#name{
-	width: 50%;
-	height: 50%
-}
+
 
 #myCanvas{
-	height: 24em;
+	height: 20em;
 	margin-left: 15%;
 }
