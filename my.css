@@ -26,8 +26,8 @@
 	
 	height: 20em;
 	
-	background-image: url(4.png);
-	background-position:center;
+	background-image: url(quiche.jpg);
+	background-position:left;
 	background-size:contain;
 	background-repeat:no-repeat;
 
@@ -59,7 +59,12 @@
 	margin-left: 10%;
 }
 
-
+#text{
+	width: 50%;
+	position: relative;
+	left:500px;
+	bottom:310px;
+}
 
 #myCanvas{
 	height: 20em;

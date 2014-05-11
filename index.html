@@ -22,9 +22,7 @@
               <!-- navbar -->
                <div data-role="navbar">
                     <ul>
-                        <li><a href="#home">One</a></li>
-                        <li><a href="#galery">Two</a></li>
-                        <li><a href="#post">Three</a></li>
+                        <li><a href="#galery">Рецепты</a></li>
                         <li><a href="#contacts">О нас</a></li>
                     </ul>
                 </div>
@@ -41,8 +39,8 @@
             <div data-role="navbar">
                  <ul>
                         
-                    <li><a href="#galery" class="ui-btn " data-transition="fade">Приготовить</a></li>
-                    <li><a href="#dialog" class="ui-btn" data-transition="fade">Поделиться рецептом</a></li>
+                    <li><a href="#galery" class="ui-btn " >Приготовить</a></li>
+                    <li><a href="#dialog" class="ui-btn" >Поделиться рецептом</a></li>
                 </ul>
             </div>
         </div>
@@ -51,12 +49,10 @@
 	<div data-role="page" id="galery" >
 
     	<div  id="firstpage" data-role="header" data-backbtn="false" >
-  			<p> Hide-and-seek time!</p>
+  			<p> Веганский Нежданчик</p>
             <div data-role="navbar">
                     <ul>
-                        <li><a href="#home">One</a></li>
-                        <li><a href="#galery">Two</a></li>
-                        <li><a href="#post">Three</a></li>
+                        <li><a href="#home">Главная</a></li>
                         <li><a href="#contacts">О нас</a></li>
                     </ul>
                 </div>
@@ -65,49 +61,43 @@
    		<div id="content" data-role="content" >
     		<div id="img2">
     		</div>
+
+            <div id="text">
+             <p> Ингредиенты:</p>
+            <ol data-role="listview"> 
+                <li>2 столовые ложки оливкового масла</li>
+                <li>1 среднего размера репчатый лук, порубленный</li>
+                <li> 225 гр грибов, нарезанных</li>
+                <li>2 чашки молодого шпината, порубленного</li>
+                <li> 2 зубчика чеснока, мелко порубленных</li>
+                 <li>450 гр твердого тофу</li>
+                <li>¼ чашки пищевых дрожжей</li>
+                <li> ¼ чашки кукурузного крахмала</li>
+                <li> 1 ½ столовой ложки горчицы</li>
+                <li>  1 столовая ложка лимонного сока</li>
+
+                <li> 1 чайная ложка молотого сушеного лука</li>
+                <li> 1 чайная ложка молотого сушеного чеснока</li>
+                <li> ½ чайной ложки куркумы</li>
+                <li> ½ чайной ложки соли</li>
+                <li> ¼ чайной ложки красного перца в хлопьях</li>
+                <li>  тесто для пирога</li>
+            </ol>
+
 		</div>
 
 		<div data-role="footer" >
     		<div data-role="navbar">
                  <ul>
                         
-                    <li><a href="#home" class="ui-btn ui-icon-back ui-btn-icon-right" data-transition="fade">Keep close</a></li>
-                    <li><a href="#dialog" class="ui-btn" data-transition="fade">I don't like Fin</a></li>
+                    <li><a href="#home" class="ui-btn " >На главную</a></li>
+                    <li><a href="#dialog" class="ui-btn" >Поделиться рецептом</a></li>
                 </ul>
             </div>
     	</div>
     </div>
 
-	<div data-role="page" id="post" >
-
-    	<div  id="firstpage" data-role="header" data-backbtn="false">
-   		 	<p> Hypno horse time!</p>
-            <div data-role="navbar">
-                    <ul>
-                        <li><a href="#home">One</a></li>
-                        <li><a href="#galery">Two</a></li>
-                        <li><a href="#post">Three</a></li>
-                        <li><a href="#contacts">О нас</a></li>
-                    </ul>
-                </div>
-   		</div>
-
-   		<div id="content" data-role="content" >
-    		<div id="img3">
-    		</div>
-    	</div>
-
-		<div data-role="footer">
-    	<div data-role="navbar">
-                 <ul>
-                        
-                    <li><a href="#home" class="ui-btn" data-transition="fade">Keep close</a></li>
-                    <li><a href="#galery" class="ui-btn " data-transition="fade">Open up</a></li>
-                </ul>
-            </div>
-        </div>
-    
-    </div>
+	
 
 
 <!--диалоговое-->
@@ -127,7 +117,7 @@
                  <ul>
                         
                     <li><a href="#post" class="ui-btn" >Продолжить</a></li>
-                    <li><a href="#galery" class="ui-btn ">На главную</a></li>
+                    <li><a href="#home" class="ui-btn ">На главную</a></li>
                 </ul>
             </div>
         </div>
@@ -141,9 +131,8 @@
               <!-- navbar -->
                <div data-role="navbar">
                     <ul>
-                        <li><a href="#home">One</a></li>
-                        <li><a href="#galery">Two</a></li>
-                        <li><a href="#post">Three</a></li>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#galery">Рецепты</a></li>
                     </ul>
                 </div>
          </div>
@@ -217,11 +206,18 @@
             </script>
         </div>
 
-        <div id="content_name" data-role="footer">
+            <div  data-role="footer" >
 
-            <p> </p>
+            <div data-role="navbar">
+                 <ul>
+                        
+                    <li><a href="#galery" class="ui-btn " >Приготовить</a></li>
+                    <li><a href="#dialog" class="ui-btn" >Поделиться рецептом</a></li>
+                </ul>
+            </div>
+        </div>
 
          </div>
-    </div>
+    
 </body>
 </html>
