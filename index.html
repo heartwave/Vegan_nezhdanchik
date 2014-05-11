@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<title>jQuary Mobile </title>
+         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+ 		
+ 		<link rel="stylesheet" href="themes/new.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+        <link rel="stylesheet" href="my.css">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	</head>
+
+<body>
+
+	<div id="home" data-role="page" >
+
+    	<div id="firstpage" data-role="header" data-backbtn="false">
+    		<p> Веганский Нежданчик</p>
+              <!-- navbar -->
+               <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home">One</a></li>
+                        <li><a href="#galery">Two</a></li>
+                        <li><a href="#post">Three</a></li>
+                        <li><a href="#contacts">О проекте</a></li>
+                    </ul>
+                </div>
+   		 </div>
+
+    	<div id="content" data-role="content" >
+    		
+    		<div id="img1">
+    		</div>
+    	</div>
+
+     	<div  data-role="footer" >
+
+            <div data-role="navbar">
+                 <ul>
+                        
+                    <li><a href="#galery" class="ui-btn " data-transition="fade">Приготовить нежданчик</a></li>
+                    <li><a href="#dialog" class="ui-btn" data-transition="fade">Поделиться рецептом</a></li>
+                </ul>
+            </div>
+        </div>
+     </div>
+    	
+	<div data-role="page" id="galery" >
+
+    	<div  id="firstpage" data-role="header" data-backbtn="false" >
+  			<p> Hide-and-seek time!</p>
+            <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home">One</a></li>
+                        <li><a href="#galery">Two</a></li>
+                        <li><a href="#post">Three</a></li>
+                        <li><a href="#contacts">О проекте</a></li>
+                    </ul>
+                </div>
+    	</div>
+
+   		<div id="content" data-role="content" >
+    		<div id="img2">
+    		</div>
+		</div>
+
+		<div data-role="footer" >
+    		<div data-role="navbar">
+                 <ul>
+                        
+                    <li><a href="#home" class="ui-btn ui-icon-back ui-btn-icon-right" data-transition="fade">Keep close</a></li>
+                    <li><a href="#dialog" class="ui-btn" data-transition="fade">I don't like Fin</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+
+	<div data-role="page" id="post" >
+
+    	<div  id="firstpage" data-role="header" data-backbtn="false">
+   		 	<p> Hypno horse time!</p>
+            <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home">One</a></li>
+                        <li><a href="#galery">Two</a></li>
+                        <li><a href="#post">Three</a></li>
+                        <li><a href="#contacts">О проекте</a></li>
+                    </ul>
+                </div>
+   		</div>
+
+   		<div id="content" data-role="content" >
+    		<div id="img3">
+    		</div>
+    	</div>
+
+		<div data-role="footer">
+    	<div data-role="navbar">
+                 <ul>
+                        
+                    <li><a href="#home" class="ui-btn" data-transition="fade">Keep close</a></li>
+                    <li><a href="#galery" class="ui-btn " data-transition="fade">Open up</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+
+
+<!--диалоговое-->
+
+
+
+    <div data-role="page" id="dialog"  data-dialog="true">
+
+    <div  id="header_dialog" data-role="header">
+            <p>Друзья, этот раздел находится в разработке</p>
+        </div>
+
+        <div id="content_dialog" data-role="content" >
+            <p > Пока вы можете только сфотографировать свой кулинарный изыск, приносим извинения за временные неудобства</p>
+
+            <div data-role="navbar">
+                 <ul>
+                        
+                    <li><a href="#post" class="ui-btn" >Продолжить</a></li>
+                    <li><a href="#galery" class="ui-btn ">Вернуться на главную</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="contacts">
+
+       <div  data-role="header" data-backbtn="false" >
+            <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home">One</a></li>
+                        <li><a href="#galery">Two</a></li>
+                        <li><a href="#post">Three</a></li>
+                    </ul>
+                </div>
+        </div>
+
+        <div id="content_dialog" data-role="content" >
+            <canvas id="myCanvas" ></canvas>
+            <script>
+                var canvas =document.getElementById("myCanvas");
+
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight/2.5;
+                var context = canvas.getContext("2d");
+
+
+  
+                //К
+                context.beginPath();
+                context.lineJoin="round";
+                context.lineCap='round';
+                context.lineWidth=3;
+                context.moveTo(canvas.width/23,canvas.height/4.7);
+                context.lineTo(canvas.width/23,canvas.height/1.445);
+                context.moveTo(canvas.width/23,canvas.height/2.55);
+                context.lineTo(canvas.width/11.25,canvas.height/4.7);
+                context.moveTo(canvas.width/23, canvas.height/2.627272);                         
+                context.bezierCurveTo(canvas.width/11.25, canvas.height/2.627272, canvas.width/10.3846, canvas.height/2.4083,canvas.width/10.3846,canvas.height/1.445);
+                context.stroke();
+                //А
+ 
+                context.beginPath();
+                context.lineJoin="round";
+                context.lineCap='round';
+                context.moveTo(canvas.width/8.4375,canvas.height/1.445);
+                context.lineTo(canvas.width/6.4285, canvas.height/4.8166);
+                context.moveTo(canvas.width/6.4285,canvas.height/4.8166);
+                context.lineTo(canvas.width/5.1923,canvas.height/1.445);
+                context.moveTo(canvas.width/7.03125,canvas.height/2.627272);
+                context.lineTo(canvas.width/5.9211,canvas.height/2.627272);
+                context.closePath();
+                context.stroke();
+
+                //Т
+
+                context.beginPath();
+                context.lineJoin="round";
+                context.lineCap='round';
+                context.moveTo(canvas.width/5,canvas.height/4.8166);
+                context.lineTo(canvas.width/3.6486,canvas.height/4.8166);
+                context.moveTo(canvas.width/4.2187,canvas.height/4.8166);
+                context.lineTo(canvas.width/4.2187,canvas.height/1.445);
+                context.closePath();
+                context.stroke();
+                //Я
+
+                context.beginPath();
+                context.lineJoin="round";
+                context.lineCap='round';
+                context.moveTo(canvas.width/2.9670,canvas.height/4.8166);
+                context.lineTo(canvas.width/2.9670,canvas.height/1.445);
+                context.moveTo(canvas.width/2.9670, canvas.height/2.627272);                         
+                context.bezierCurveTo(canvas.width/3.3333, canvas.height/2.627272, canvas.width/3.3333, canvas.height/4.8166,canvas.width/2.9670,canvas.height/4.8166);
+                context.moveTo(canvas.width/3.0963,canvas.height/2.627272);
+                context.lineTo(canvas.width/3.5064,canvas.height/1.445);
+                context.closePath();
+                context.stroke();
+            </script>
+        </div>
+
+        <div id="content_name" data-role="footer">
+
+            <p>Created by Kate Pavlintseva DCIM-4-1 2014</p>
+
+         </div>
+    </div>
+</body>
+</html>

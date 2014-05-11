@@ -1,0 +1,65 @@
+#firstpage p{
+
+	
+	font-size: 1.7em;
+	font-family: DextorC;
+	margin-left: 10%;
+	
+
+}
+
+#img1{
+	
+	height: 20em;
+	
+	background-image: url(logo.png);
+	background-position:center;
+	background-size:contain;
+	background-repeat:no-repeat;
+	
+}
+
+
+#img2{
+	
+	height: 20em;
+	
+	background-image: url(4.png);
+	background-position:center;
+	background-size:contain;
+	background-repeat:no-repeat;
+
+}
+
+#img3{
+	
+	height: 20em;
+	background-image: url(1.png);
+	background-position:center;
+	background-size:contain;
+	background-repeat:no-repeat;
+
+}
+
+
+#content{
+	background-image: url(fon.jpg);
+	background-position:center;
+	background-size:cover;
+}
+
+#header_dialog p{
+	font-size: 1em;
+	margin: 10%;
+}
+
+#content_dialog h2{
+	margin-left: 15%;
+}
+
+
+
+#myCanvas{
+	height: 24em;
+	margin-left: 15%;
+}
