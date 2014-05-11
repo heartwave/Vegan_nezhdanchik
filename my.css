@@ -45,18 +45,19 @@
 
 
 #content{
-	background-image: url(fon.jpg);
+
 	background-position:center;
 	background-size:cover;
 }
 
 #header_dialog p{
-	font-size: 1em;
+	font-size: medium;
 	margin-left: 15%;
 }
 
 #content_dialog p{
 	margin-left: 10%;
+		font-size: medium;
 }
 
 
