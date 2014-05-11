@@ -12,6 +12,23 @@
         <link href='http://fonts.googleapis.com/css?family=Philosopher&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
         <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+
+
+
+        <script> 
+        function captureSuccess(mediaFiles) {
+            navigator.notification.alert('Success taking picture:');
+        }        
+        function captureError(mediaFiles) {
+            navigator.notification.alert('Error taking picture: ' + error.code);
+        }
+        $(document).bind("deviceready",function () {
+            $("#takePhotoButton").bind("tap", function() {
+                navigator.device.capture.captureImage(captureSuccess, captureError, {limit: 1});
+            });
+        });
+</script>
 	</head>
 
 <body>
@@ -283,6 +300,46 @@
         </div>
 
          </div>
+
+
+
+
+<div id="post" data-role="page" >
+        <div id="firstpage" data-role="header" data-backbtn="false">
+            <p> Веганский Нежданчик</p>
+              <!-- navbar -->
+               <div data-role="navbar">
+                    <ul>
+                    <li><a href="#home">Главная</a></li>
+                        <li><a href="#galery">Рецепты</a></li>
+                        <li><a href="#contacts">О нас</a></li>
+                    </ul>
+                </div>
+         </div>
+
+        <div id="content" data-role="content" >
+
+        <div id="img1">
+            </div>
+            
+          <a id="takePhotoButton" class="ui-btn">Take Photo</a>  
+        </div>
+
+        <div  data-role="footer" >
+
+            <div data-role="navbar">
+                 <ul>
+                        
+                    <li><a href="#galery" class="ui-btn " >Приготовить</a></li>
+                    <li><a href="#dialog" class="ui-btn" >Поделиться рецептом</a></li>
+                </ul>
+            </div>
+        </div>
+     </div>
+
+
+
+
     
 </body>
 </html>
