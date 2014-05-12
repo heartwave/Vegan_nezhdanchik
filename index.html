@@ -16,38 +16,75 @@
 
 
 <script type="text/javascript" src="phonegap.js"></script> 
-       <script type="text/javascript" charset="utf-8">
- 
-            var pictureSource,
-                destinationType
-             
-            document.addEventListener("deviceready",loaded,false);
-             
-            function loaded() {
-                pictureSource=navigator.camera.PictureSourceType;
-                destinationType=navigator.camera.DestinationType;
-            }
-             
-            function getPhoto(imageData) {
-                var smallImage = document.getElementById('smallImage');
-                 
-                 
-                smallImage.style.display = 'block';
-                 
-                 
-                smallImage.src = "data:image/jpeg;base64," + imageData;
-            }
-             
-            function capturePhoto() {
-                navigator.camera.getPicture(getPhoto, onFail, { quality: 50 });
-            }
-            
-             
-            function onFail(message) {
-                alert('Failed because: ' + message);
-            }
-             
-            </script>
+      <script type="text/javascript" charset="utf-8">
+
+var pictureSource; // picture source
+var destinationType; // sets the format of returned value
+
+// Wait for device API libraries to load
+//
+document.addEventListener("deviceready",onDeviceReady,false);
+
+// device APIs are available
+//
+function onDeviceReady() {
+pictureSource=navigator.camera.PictureSourceType;
+destinationType=navigator.camera.DestinationType;
+}navigator
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoDataSuccess(imageData) {
+// Uncomment to view the base64-encoded image data
+// console.log(imageData);
+
+// Get image handle
+//
+var sImage = document.getElementById('Image');
+
+// Unhide image elements
+//
+sImage.style.display = 'block';
+
+// Show the captured photo
+// The inline CSS rules are used to resize the image
+//
+sImage.src = "data:image/jpeg;base64," + imageData;
+}
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoURISuccess(imageURI) {
+// Uncomment to view the image file URI
+// console.log(imageURI);
+
+// Get image handle
+//
+var largeImage = document.getElementById('largeImage');
+
+// Unhide image elements
+//
+largeImage.style.display = 'block';
+
+// Show the captured photo
+// The inline CSS rules are used to resize the image
+//
+largeImage.src = imageURI;
+}
+
+// A button will call this function
+//
+function Photo() {
+// Take picture using device camera and retrieve image as base64-encoded string
+navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+destinationType: destinationType.DATA_URL });
+}
+
+function onFail(message) {
+alert('Failed because: ' + message);
+}
+
+</script>
 	</head>
 
 <body>
@@ -341,10 +378,11 @@
         <div id="img1">
             </div>
             
-          <a onclick="capturePhoto();" class="ui-btn">Take Photo</a>  
+          <a onclick="Photo();" class="ui-btn">Take Photo</a>  
           <br>
-    <img style="display:none;width:160px;height:160px;" id="Image" src="" />
-<img style="display:none;" id="largeImage" src="" />
+            <img style="display:none;width:160px;height:160px;" id="Image" src="" />
+            <img style="display:none;" id="largeImage" src="" />
+
         </div>
 
         <div  data-role="footer" >
